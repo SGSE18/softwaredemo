@@ -1,0 +1,30 @@
+query getCard($cardID: String!) {
+  card(id: $cardID) {
+    ...cardFields
+  }
+}
+
+query getCards($rarity: String) {
+  cards(rarity: $rarity) {
+    ...cardFields
+  }
+}
+
+mutation updateCardText($cardID: String!, $text: String!) {
+  updateCardText(id: $cardID, text: $text) {
+    ... cardFields
+  }
+}
+
+fragment cardFields on Card {
+  id
+  rarity
+  cmc
+  manaCost
+  name
+  power
+  toughness
+  text
+  types
+  type
+}

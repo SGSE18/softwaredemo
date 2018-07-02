@@ -1,0 +1,16 @@
+{
+	"users": [
+		{
+			"name": "John Doe",
+			"location": "Minden",
+			"birthday": "24.02.1997",
+			"image": "picture.jpg"
+		},
+		{
+			"name": "Jane Doe",
+			"location": "Minden",
+			"birthday": "01.03.1997",
+			"image": "picture2.jpg"
+		}
+	]
+}
