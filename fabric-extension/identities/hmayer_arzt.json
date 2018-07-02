@@ -1,0 +1,18 @@
+{
+  "Network": {
+      "Channel": "mychannel",
+      "Orderer": "http://localhost:7050",
+      "Peers": [
+          "http://localhost:7051"
+      ],
+      "Hubs": [
+          "http://localhost:7053"
+      ]
+  },
+  "Identity": {
+    "Msp":"MainOrgMSP",
+    "Key":"-----BEGIN PRIVATE KEY-----\nMIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgdENEUc8VNU8Rtnt/\n8UJegi/9takwUL7xV/4whFee1XOhRANCAAT6EkpV4TJp/FGLMJkD2pMW/nIOgHJr\nrhgvDAMl7LLwV53ytnkL7IikpuhFMVnbxRsY3TIfHY0R0RtbK9uTgKt1\n-----END PRIVATE KEY-----",
+    "Certificate":"-----BEGIN CERTIFICATE-----\nMIICKTCCAc+gAwIBAgIQETsYEYihkJYJEJVLKpvkczAKBggqhkjOPQQDAjB4MQsw\nCQYDVQQGEwJERTEMMAoGA1UECBMDTlJXMRIwEAYDVQQHEwlCaWVsZWZlbGQxITAf\nBgNVBAoTGG1haW5vcmcuaGVhbHRoLWxlZGdlci5kZTEkMCIGA1UEAxMbY2EubWFp\nbm9yZy5oZWFsdGgtbGVkZ2VyLmRlMCAXDTE4MDYxNjExMTMzOFoYDzIxMTgwNTIz\nMTExMzM4WjBkMRUwEwYDVQQDDAxEci4gSC4gTWF5ZXIxCzAJBgNVBAYTAkRFMQww\nCgYDVQQIDANOUlcxITAfBgNVBAoMGG1haW5vcmcuaGVhbHRoLWxlZGdlci5kZTEN\nMAsGA1UECwwEQXJ6dDBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABPoSSlXhMmn8\nUYswmQPakxb+cg6AcmuuGC8MAyXssvBXnfK2eQvsiKSm6EUxWdvFGxjdMh8djRHR\nG1sr25OAq3WjTTBLMA4GA1UdDwEB/wQEAwIHgDAMBgNVHRMBAf8EAjAAMCsGA1Ud\nIwQkMCKAIGbYBFc6gxOePq6MOtDSl6Fa3mSAGERVNZJWw0iWbgAqMAoGCCqGSM49\nBAMCA0gAMEUCIFcGG1L/3fhfaUu/YW9VD9wOw8zh7rtPqqxhgrbQE7byAiEA7/R0\nsFlKzLW8y+ygtsIDNQnM+RCLH3GucimR2+3uocU=\n-----END CERTIFICATE-----"
+  },
+  "Matches": "http:\/\/localhost:4200\/#arzt"
+}

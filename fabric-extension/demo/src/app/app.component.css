@@ -1,0 +1,15 @@
+.tab-icon {
+    padding: 0 14px;
+  }
+  
+  .tab-spacer {
+    flex: 1 1 auto;
+  }
+
+  .body {
+    margin: 20px;
+  }
+
+  mat-card {
+    width: 60%;
+  }

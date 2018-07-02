@@ -1,0 +1,39 @@
+<div fxLayout="column" fxLayoutAlign="start stretch" fxFill>
+    <div fxLayout="row" fxLayoutAlign="start stretch" fxFlex="25">
+        <div fxFlex="35" fxLayoutAlign="center center">
+            <img src="../images/icon-128.png" style="width: 80px;" (click)="logout()">
+        </div>
+        <div fxLayout="column" fxLayoutAlign="center start" fxFlex>
+            <h1 class="mat-h1">Fabric Chrome Extension</h1>
+            <button mat-icon-button color="accent" (click)="logout()" style="margin-top:-15px;">
+                <mat-icon>exit_to_app</mat-icon>
+                Logout
+            </button>
+        </div>
+    </div>
+    <mat-toolbar color="primary" style="height: 36px; min-height: 36px;">
+        <span style="font-size: 16px">Accounts</span>
+        <span style="flex: 1 1 auto;"></span>
+        <button mat-mini-fab color="accent" (click)="fileInput.click()" style="z-index: 1000;">
+            <mat-icon>add</mat-icon>
+        </button>
+        <input type="file" #fileInput (change)="addAccount($event.target.files)" style="display:none;">
+    </mat-toolbar>
+    <div fxLayout="column" fxLayoutAlign="start stretch" style="overflow-y: scroll">
+        <div *ngFor="let account of user?.Accounts">
+            <div fxLayout="row" fxLayoutAlign="start stretch">
+                <div fxLayout="column" fxLayoutAlign="start stretch" fxFlex style="padding-left:15px; margin-bottom:10px">
+                    <h3> {{account.name}}</h3>
+                    <span>Organization: {{account.organization}}</span>
+                    <span>Abteilung: {{account.unit}}</span>
+                </div>
+                <div fxLayout="column" fxLayoutAlign="center center" fxFlex="20">
+                    <button mat-mini-fab color="primary" (click)="delAccount(account.id)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <mat-divider></mat-divider>
+        </div>
+    </div>
+</div>

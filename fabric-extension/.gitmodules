@@ -1,0 +1,3 @@
+[submodule "fabric"]
+	path = fabric
+	url = https://cemizm@github.com/hyperledger/fabric

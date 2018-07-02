@@ -1,0 +1,10 @@
+<div fxLayout="column" fxLayoutAlign="center center" class="container">
+  <img src="../images/icon-128.png" (click)="reset()">
+  <form (ngSubmit)="login()" class="fields" #f="ngForm" novalidate>
+    <mat-form-field>
+      <input matInput placeholder="Passwort" type="password" name="password" [(ngModel)]="password" required>
+      <mat-error *ngIf="isError">Ungültiges Passwort</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary">Login</button>
+  </form>
+</div>
