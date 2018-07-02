@@ -1,0 +1,18 @@
+{
+  "Network": {
+      "Channel": "mychannel",
+      "Orderer": "http://localhost:7050",
+      "Peers": [
+          "http://localhost:7051"
+      ],
+      "Hubs": [
+          "http://localhost:7053"
+      ]
+  },
+  "Identity": {
+    "Msp":"MainOrgMSP",
+    "Key":"-----BEGIN PRIVATE KEY-----\nMIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQg53MQiVqnLtcYvLD6\nj4eqTRcbjIZUvImv8FdgtwuOLs6hRANCAASUIm2sjngd4BlZazOSENMKlXg99dfx\n5SyXGYSV0N8g+xR0hkoKWN9uZYuWnA/Zuqvli8iEZd5eX4+P41RRVAfr\n-----END PRIVATE KEY-----",
+    "Certificate":"-----BEGIN CERTIFICATE-----\nMIICOzCCAeCgAwIBAgIQQwdFEADvNnSr+kFN51nYAzAKBggqhkjOPQQDAjB4MQsw\nCQYDVQQGEwJERTEMMAoGA1UECBMDTlJXMRIwEAYDVQQHEwlCaWVsZWZlbGQxITAf\nBgNVBAoTGG1haW5vcmcuaGVhbHRoLWxlZGdlci5kZTEkMCIGA1UEAxMbY2EubWFp\nbm9yZy5oZWFsdGgtbGVkZ2VyLmRlMCAXDTE4MDYxNjExMTY0N1oYDzIxMTgwNTIz\nMTExNjQ3WjB1MR4wHAYDVQQDDBVCYXJtZXIgVmVyc2ljaGVydW5nZW4xCzAJBgNV\nBAYTAkRFMQwwCgYDVQQIDANOUlcxITAfBgNVBAoMGG1haW5vcmcuaGVhbHRoLWxl\nZGdlci5kZTEVMBMGA1UECwwMVmVyc2ljaGVydW5nMFkwEwYHKoZIzj0CAQYIKoZI\nzj0DAQcDQgAElCJtrI54HeAZWWszkhDTCpV4PfXX8eUslxmEldDfIPsUdIZKCljf\nbmWLlpwP2bqr5YvIhGXeXl+Pj+NUUVQH66NNMEswDgYDVR0PAQH/BAQDAgeAMAwG\nA1UdEwEB/wQCMAAwKwYDVR0jBCQwIoAgZtgEVzqDE54+row60NKXoVreZIAYRFU1\nklbDSJZuACowCgYIKoZIzj0EAwIDSQAwRgIhAO2kESOAsofiFoRiM8IXT3mDAd5Z\nutfv2AKJV8/tt6cSAiEAs1cdUXE2HCnyJXPm4SRHfx48MPdKH8qMt+opy1H6w4E=\n-----END CERTIFICATE-----"
+  },
+  "Matches": "http:\/\/localhost:4200\/#versicherung"
+}

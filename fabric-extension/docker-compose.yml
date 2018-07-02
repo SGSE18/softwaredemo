@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+  orderer:
+    build: .
+    container_name: orderer
+    image: grpcproxy
+    ports:
+      - 7050:8080
+    command: --backend_addr=health-ledger.westeurope.cloudapp.azure.com:7050 --run_tls_server=false
+  peer0:
+    build: .
+    container_name: peer0
+    image: grpcproxy
+    ports:
+      - 7051:8080
+    command: --backend_addr=health-ledger.westeurope.cloudapp.azure.com:7051 --run_tls_server=false
+  hub0:
+    build: .
+    container_name: hub0
+    image: grpcproxy
+    ports:
+      - 7053:8080
+    command: --backend_addr=health-ledger.westeurope.cloudapp.azure.com:7053 --run_tls_server=false

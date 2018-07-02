@@ -1,0 +1,18 @@
+{
+  "appName": {
+    "message": "Certificate Storage",
+    "description": "The name of the application"
+  },
+  "appShortName": {
+    "message": "CertStore",
+    "description": "The short_name (maximum of 12 characters recommended) is a short version of the app's name."
+  },
+  "appDescription": {
+    "message": "Stores Hyperledger Fabric certificates and provides an interface to interact with the distributed ledger.",
+    "description": "The description of the application"
+  },
+  "browserActionTitle": {
+    "message": "CertStore",
+    "description": "The title of the browser action button"
+  }
+}
