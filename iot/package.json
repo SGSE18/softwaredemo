@@ -1,0 +1,16 @@
+{
+  "name": "SGSE_IOT_DEMO",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "sudo node ./src/index.js"
+  },
+  "dependencies": {
+    "socket.io-client": "^2.1.1",
+    "pi-spi": "^1.0.2",
+    "websocket": "^1.0.26",
+    "onoff": "^3.1.0",
+    "node-dht-sensor": "^0.0.34"
+
+  }
+}
