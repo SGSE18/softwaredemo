@@ -7,7 +7,7 @@ const fs = require('fs');
 var schema = buildSchema(`
     type Query {
         card(id: String): Card
-        cards(manaCost: String, rarity: String, number: Int, cmc: Int, types: String): [Card]
+        cards(manaCost: String, rarity: String, number: Int, cmc: Int, types: String, supertypes: [String] colors: [String]): [Card]
     },
     type Mutation {
         updateCardText(id: String!, text: String!): Card
@@ -16,7 +16,7 @@ var schema = buildSchema(`
         id: String!
         artist: String
         colorIdentity: [String]
-        colors: String
+        colors: [String]
         manaCost: String
         cmc: Int
         number: Int!
@@ -44,7 +44,7 @@ var getCard = function(args) {
 
 var getCards = function(args) {
     var resultData = setData["cards"];
-    if(args.manaCost || args.cmc || args.number || args.rarity || args.types){
+    if(args.manaCost || args.cmc || args.number || args.rarity || args.supertypes || args.types || args.colors){
         if (args.manaCost) {
             var manaCost = args.manaCost;
             resultData = resultData.filter(card => card.manaCost === manaCost);
@@ -61,10 +61,22 @@ var getCards = function(args) {
             var rarity = args.rarity;
             resultData = resultData.filter(card => card.rarity === rarity);
         }
+		if (args.supertypes) {
+			var supertypes = args.supertypes;
+			for(var i = 0; i < supertypes.length; i++){
+				resultData = resultData.filter(card => checkSupertypes(card, supertypes[i]));
+			}
+		}
         if (args.types) {
             var types = args.types;
             resultData = resultData.filter(card => card.types.indexOf(types) >= 0);
         }
+		if (args.colors) {
+			var colors = args.colors;
+			for(var i = 0; i < colors.length; i++){
+				resultData = resultData.filter(card => checkColors(card, colors[i]));
+			}
+		}
     }
 
     return resultData;
@@ -94,3 +106,20 @@ app.use('/graphql', express_graphql({
     graphiql: true
 }));
 app.listen(4000, () => console.log('Express GraphQL Server Now Running On localhost:4000/graphql'));
+
+
+function checkColors(card, color){
+	if(card.hasOwnProperty("colors")){
+		return card.colors.indexOf(color) >= 0;
+	} else {
+		return false;
+	}
+}
+
+function checkSupertypes(card, supertype){
+	if(card.hasOwnProperty("supertypes")){
+		return card.supertypes.indexOf(supertype) >= 0;
+	} else {
+		return false;
+	}
+}
