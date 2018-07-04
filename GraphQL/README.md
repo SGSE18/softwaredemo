@@ -1,6 +1,4 @@
 Anwendung ist online
-[hier](https://alluring-saguaro-38302.herokuapp.com/graphql) zu finden.
-
-In der Datei __exampleQueries.txt__ finden sich einige Beispiel-Queries, die lediglich mit Parametern gefüllt werden müssen. 
+<a href="https://alluring-saguaro-38302.herokuapp.com/graphql?query=query%20getCard(%24cardID%3A%20String!)%20%7B%0A%20%20card(id%3A%20%24cardID)%20%7B%0A%20%20%20%20...cardFields%0A%20%20%7D%0A%7D%0A%0Aquery%20getCards(%24rarity%3A%20String)%20%7B%0A%20%20cards(rarity%3A%20%24rarity)%20%7B%0A%20%20%20%20...cardFields%0A%20%20%7D%0A%7D%0A%0Amutation%20updateCardText(%24cardID%3A%20String!%2C%20%24text%3A%20String!)%20%7B%0A%20%20updateCardText(id%3A%20%24cardID%2C%20text%3A%20%24text)%20%7B%0A%20%20%20%20...%20cardFields%0A%20%20%7D%0A%7D%0A%0Afragment%20cardFields%20on%20Card%20%7B%0A%20%20id%0A%20%20name%0A%20%20rarity%0A%20%20cmc%0A%20%20manaCost%0A%20%20type%0A%7D&operationName=getCards&variables=%7B%0A%20%20%22rarity%22%3A%20%22Rare%22%0A%7D">hier</a> zu finden.
 
 Zum lokalen Deployen der Anwendung muss lediglich `node serverMTG.js` ausgeführt werden.
